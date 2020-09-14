@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{570A5D56-F168-89D3-7ED6-DFBFF2C66882}</ProjectGuid>
+    <ProjectGuid>{1536C279-86FA-3D28-E8E3-D93C155131F0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,33 +60,34 @@
   <ItemGroup>
      <Compile Include="Assets\Scrips\Path.cs" />
      <Compile Include="Assets\Scrips\PathFollower.cs" />
+     <Compile Include="Assets\Scrips\PlayerHealth.cs" />
      <Compile Include="Assets\Scrips\Waypoint.cs" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>A:/Projecten/TowerDefense/PathFinder/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>A:/Projecten/TowerDefense/PathFollow/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>A:/Projecten/TowerDefense/PathFinder/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>A:/Projecten/TowerDefense/PathFollow/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>A:/Projecten/TowerDefense/PathFinder/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>A:/Projecten/TowerDefense/PathFollow/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>A:/Projecten/TowerDefense/PathFinder/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>A:/Projecten/TowerDefense/PathFollow/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>A:/Projecten/TowerDefense/PathFinder/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>A:/Projecten/TowerDefense/PathFollow/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>A:/Projecten/TowerDefense/PathFinder/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>A:/Projecten/TowerDefense/PathFollow/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>A:/Projecten/TowerDefense/PathFinder/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>A:/Projecten/TowerDefense/PathFollow/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>A:/Projecten/TowerDefense/PathFinder/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>A:/Projecten/TowerDefense/PathFollow/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>A:/Projecten/TowerDefense/PathFinder/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>A:/Projecten/TowerDefense/PathFollow/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

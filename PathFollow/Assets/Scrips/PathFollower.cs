@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Opdrachten
 {
@@ -10,8 +11,11 @@ namespace Opdrachten
     /// Deze class zorgt ervoor dat het object (in Tower Defense) vaak een enemy, het path afloopt
     /// tip: je kunt de transform.LookAt() functie gebruiken en vooruitbewegen.
     /// </summary>
+    ///
+    
     public class PathFollower : MonoBehaviour
     {
+        public UnityEvent action;
         [SerializeField] private Path _path;
         private Vector3 _startPos;
         private Waypoint _currentWaypoint;
@@ -22,21 +26,17 @@ namespace Opdrachten
         {
             _currentWaypoint = _path.getCurrentWaypoint();
             _startPos = transform.position;
+            
+            if(action == null){action = new UnityEvent();}
+            action.AddListener(() => { Debug.Log("PINGED"); });
         }
 
         private void Update()
         {
-            if (!canmove){
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    canmove = true;
-                }
-
-                return;
-            }
-        if (_currentWaypoint == null)
+            if (_currentWaypoint == null)
             {
                 print("Enemy is bij het einde");
+                action.Invoke();
                 return;
             }
             
