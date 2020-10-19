@@ -8,8 +8,8 @@ public class TowerBase : MonoBehaviour
 {
     protected EnemyInRangeChecker _rangeChecker;
     protected Enemy _target;
-    private float _cooldown = 0;
-    private float _currentCooldown = 0;
+    [SerializeField] private float _cooldown = 0;
+    [SerializeField] private float _currentCooldown = 0;
     private void Awake()
     {
         _rangeChecker = GetComponent<EnemyInRangeChecker>();
@@ -18,8 +18,17 @@ public class TowerBase : MonoBehaviour
 
     private void Update()
     {
-        if (!CanAttack()) return;
-        Attack();
+        if(CanAttack()) RotateToTarget(_target.transform.position);
+        if (_currentCooldown < 0)
+        {
+            if (!CanAttack()) return;
+            _currentCooldown = _cooldown;
+            Attack();
+        } 
+        else
+        {
+            _currentCooldown -= Time.deltaTime;
+        }
     }
 
     protected virtual bool CanAttack()
@@ -29,4 +38,10 @@ public class TowerBase : MonoBehaviour
     protected virtual void Attack()
     {
     }
+    
+    protected virtual void RotateToTarget(Vector3 location)
+    {
+    }
+    
+    public virtual void setUsterinterface(GameObject obj){}
 }

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3218578614760303582}
   - component: {fileID: 3535387979529725819}
   - component: {fileID: 3340604983750365830}
+  - component: {fileID: -1231927254437898203}
+  - component: {fileID: -6593310655844867202}
   m_Layer: 0
   m_Name: weapon_blaster(Clone)
   m_TagString: Untagged
@@ -82,6 +84,37 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &-1231927254437898203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2545237626281271690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27ca62b9919b4c46bf79618db12f98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+  _layer:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &-6593310655844867202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2545237626281271690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4685589afc2af4780ae37294dd7c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cooldown: 0
+  _currentCooldown: 0
+  rotateSpeed: 10
 --- !u!1 &4590011234461492116
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,6 +21,8 @@ namespace Opdrachten
         private Vector3 _startPos;
         private Waypoint _currentWaypoint;
         public float speed = 5;
+        public float rotateSpeed = 10;
+        [SerializeField] private bool _isRotating = true;
 
         void Start()
         {
@@ -45,20 +47,32 @@ namespace Opdrachten
             if (_currentWaypoint == null)
             {
                 onPathComplete.Invoke();
-                Destroy(this.gameObject);
                 return;
             }
             
             Vector3 targetPos = _path.getCurrentWaypoint().Position;
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(targetPos.x, transform.position.y, targetPos.z), speed * Time.deltaTime);
-            transform.LookAt(new Vector3(targetPos.x, transform.position.y, targetPos.z));
-            if (transform.position == new Vector3(targetPos.x, transform.position.y, targetPos.z))
+           if(_isRotating) RotateTowards(new Vector3(targetPos.x, transform.position.y, targetPos.z));
+           if (transform.position == new Vector3(targetPos.x, transform.position.y, targetPos.z))
             {
                 float distance = Vector3.Distance(_startPos, transform.position);
                 _startPos = transform.position;
                 _currentWaypoint = _path.GetNextWaypoint();
                 _path.currentWayPoint++;
             }
+        }
+        public void RotateTowards(Vector3 location)        
+        {
+            Vector3 dir = location - transform.position;
+            dir.y = 0;
+            Quaternion rot = Quaternion.LookRotation(dir);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rot, rotateSpeed * Time.deltaTime);
+        }
+        
+        public void ResetWaypoint()
+        {
+            _path.currentWayPoint = 0;
+            _currentWaypoint = _path.getCurrentWaypoint();
         }
     }
 }

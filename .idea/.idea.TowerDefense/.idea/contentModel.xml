@@ -7,6 +7,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scrips" t="Include">
+          <e p="ArrowSpawner.cs" t="Include" />
           <e p="Enemy" t="Include">
             <e p="Enemy.cs" t="Include" />
             <e p="Path" t="Include">
@@ -20,6 +21,7 @@
               <e p="Spawner.cs" t="Include" />
             </e>
           </e>
+          <e p="eventFunctions.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="PlayerHealth.cs" t="Include" />
           </e>
@@ -29,9 +31,11 @@
               <e p="TowerHandler.cs" t="Include" />
             </e>
             <e p="Towers" t="Include">
+              <e p="Ballista.cs" t="Include" />
+              <e p="Blaster.cs" t="Include" />
+              <e p="Cannon.cs" t="Include" />
+              <e p="Catapult.cs" t="Include" />
               <e p="EnemyInRangeChecker.cs" t="Include" />
-              <e p="MultiTargetTower.cs" t="Include" />
-              <e p="SingleTargetTower.cs" t="Include" />
               <e p="TowerBase.cs" t="Include" />
             </e>
           </e>

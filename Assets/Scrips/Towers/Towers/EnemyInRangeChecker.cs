@@ -7,13 +7,12 @@ public class EnemyInRangeChecker : MonoBehaviour
 
     public Enemy GetFirstEnemyInRange()
     {
+
         Collider[] cols = Physics.OverlapSphere(transform.position, range, _layer);
         foreach (var c in cols)
         {
-            print(c.name);
             if (cols.Length < 1) return null;
             return cols[0].GetComponent<Enemy>();
-
         }
         return null;
     }
