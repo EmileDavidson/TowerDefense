@@ -122,9 +122,10 @@ GameObject:
   - component: {fileID: 9144097879655453419}
   - component: {fileID: -8767151298878186415}
   - component: {fileID: 3184883117963776988}
+  - component: {fileID: -1408294954729544684}
   m_Layer: 0
   m_Name: weapon_cannon(Clone)
-  m_TagString: Untagged
+  m_TagString: TowerObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,3 +225,16 @@ MonoBehaviour:
   _cooldown: 0
   _currentCooldown: 0
   rotateSpeed: 10
+--- !u!65 &-1408294954729544684
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5261983273759831697}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.22992358, y: 0.15748087, z: 0.22992358}
+  m_Center: {x: 0, y: 0.07874043, z: 0}

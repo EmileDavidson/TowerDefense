@@ -19,7 +19,11 @@ public class EnemyInRangeChecker : MonoBehaviour
 
     public Enemy[] GetAllEnemiesInRange()
     {
-        return null;
+        Collider[] cols = Physics.OverlapSphere(transform.position, range, _layer);
+        if (cols.Length < 1) return null;
+        Enemy[] enemies = new Enemy[cols.Length];
+        for (int i = 0; i < cols.Length; i++) enemies[i] = cols[i].GetComponent<Enemy>();
+        return enemies;
     }
     
     public void OnDrawGizmosSelected()

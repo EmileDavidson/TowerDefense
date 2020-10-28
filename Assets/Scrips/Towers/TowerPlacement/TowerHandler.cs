@@ -49,7 +49,19 @@ public class TowerHandler : MonoBehaviour
 
         if (currentlySelectedTower.CompareTag("TowerObject"))
         {
-             //er staat wel een tower op 
+            //er staat wel een tower op 
+             if (currentlySelectedTower.GetComponent<TowerBase>() != null)
+             {
+                 if (currentlySelectedTower.GetComponent<TowerBase>().hasUserinterface())
+                 {
+                     currentlySelectedTower.GetComponent<TowerBase>().openUserinterface();
+                     userInterfaceOpened = true;
+                 }
+                 else
+                 {
+                     print("geen interface gevonden.");
+                 }
+             }
         }
     }
 

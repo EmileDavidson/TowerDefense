@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3295622873662239748}
   - component: {fileID: -174689729654850220}
   - component: {fileID: 8652020120430806036}
+  - component: {fileID: -7471854113994166840}
   m_Layer: 0
   m_Name: weapon_catapult(Clone)
-  m_TagString: Untagged
+  m_TagString: TowerObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +116,19 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 256
+--- !u!65 &-7471854113994166840
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959329793297101882}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.22992358, y: 0.15748087, z: 0.22992358}
+  m_Center: {x: 0, y: 0.07874043, z: 0}
 --- !u!1 &6266782350400974004
 GameObject:
   m_ObjectHideFlags: 0

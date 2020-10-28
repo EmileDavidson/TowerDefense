@@ -1,4 +1,5 @@
-﻿using Opdrachten;
+﻿using System;
+using Opdrachten;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -6,11 +7,14 @@ public class Spawner : MonoBehaviour
     public GameObject enemyPrefab;
     public PlayerHealth PlayerHealthScript;
     
-    private void Start()
+    private void Update()
     {
-        SpawnEnemy();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SpawnEnemy();
+        }
     }
-    
+
     public void SpawnEnemy()
     {
         GameObject enemyObj = Instantiate(enemyPrefab);

@@ -173,9 +173,10 @@ GameObject:
   - component: {fileID: 6076928500932302724}
   - component: {fileID: 2310225187643776124}
   - component: {fileID: 6480527259637287998}
+  - component: {fileID: 539128833515324509}
   m_Layer: 0
   m_Name: weapon_ballista
-  m_TagString: Untagged
+  m_TagString: TowerObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,8 +256,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8172f6ed83a064343881c35903750470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cooldown: 5
+  _cooldown: 0
+  _currentCooldown: 0
+  hasInterface: 0
+  _userInterfaceObject: {fileID: 0}
   rotateSpeed: 15
+  _maxTargets: 3
 --- !u!114 &6480527259637287998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,3 +278,16 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 256
+--- !u!65 &539128833515324509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5506002710204670808}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.22992359, y: 0.15748088, z: 0.22992359}
+  m_Center: {x: 0, y: 0.07874044, z: 0}

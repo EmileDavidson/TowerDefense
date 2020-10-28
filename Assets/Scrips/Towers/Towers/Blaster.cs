@@ -14,12 +14,13 @@ public class Blaster : TowerBase
 
     protected override void Attack()
     {
-        RotateToTarget(_target.gameObject.transform.position);
+        RotateToTarget();
         _target.RemoveHealth(1);
     }
         
-    protected override void RotateToTarget(Vector3 location)
+    protected override void RotateToTarget()
     {
+        Vector3 location = _target.transform.position;
         Vector3 dir = location - transform.position;
         dir.y = 0;
         Quaternion rot = Quaternion.LookRotation(dir);
